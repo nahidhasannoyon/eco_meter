@@ -1,7 +1,4 @@
-import 'package:get/get.dart';
-
-import '../modules/home/home_binding.dart';
-import '../modules/home/home_page.dart';
+import 'package:eco_meter/app/core/constants/app_imports.dart';
 
 class HomeRoutes {
   HomeRoutes._();

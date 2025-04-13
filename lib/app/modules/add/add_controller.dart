@@ -1,7 +1,7 @@
 import 'package:eco_meter/app/core/constants/app_imports.dart';
 
-class HomeController extends GetxController {
-  //TODO: Implement HomeController.
+class AddController extends GetxController {
+  //TODO: Implement AddController.
 
   @override
   void onInit() {

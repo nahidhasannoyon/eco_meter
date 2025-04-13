@@ -1,10 +1,10 @@
 import 'package:eco_meter/app/core/constants/app_imports.dart';
 
-class HomeBinding extends Bindings {
+class SignInBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<HomeController>(
-      () => HomeController(),
+    Get.lazyPut<SignInController>(
+      () => SignInController(),
     );
   }
 }
