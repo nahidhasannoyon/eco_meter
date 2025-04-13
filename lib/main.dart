@@ -1,15 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import 'app/core/config/app_bindings.dart';
-import 'app/core/config/app_logger.dart';
-import 'app/routes/app_pages.dart';
+import 'package:eco_meter/app/core/constants/app_imports.dart';
 
 void main() {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Repo Hunter',
+      title: 'Eco Meter',
       initialBinding: AppBindings(),
       initialRoute: AppPages.initial,
       getPages: AppPages.routes,

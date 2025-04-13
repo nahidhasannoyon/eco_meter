@@ -1,6 +1,4 @@
-import 'package:eco_meter/app/core/helpers/responsive_helper.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:eco_meter/app/core/constants/app_imports.dart';
 
 class Dimensions {
   static double fontSizeExtraSmall =

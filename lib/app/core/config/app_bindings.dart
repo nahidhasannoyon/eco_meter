@@ -1,4 +1,4 @@
-import 'package:get/get.dart';
+import 'package:eco_meter/app/core/constants/app_imports.dart';
 
 class AppBindings extends Bindings {
   @override

@@ -1,3 +1,4 @@
+
 class AppConfig {
   static const String appName = 'Flutter App';
   static const String slogan = 'Your Slogan Here';
