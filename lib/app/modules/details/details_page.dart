@@ -179,9 +179,8 @@ class DetailsPage extends GetView<DetailsController> {
                 ),
               ],
             ),
-            const SizedBox(height: 200),
-
-            // Row with month dates
+            const SizedBox(height: 10),
+            Image(image: AssetImage(AppImages.historyGraph)),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

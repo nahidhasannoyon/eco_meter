@@ -24,4 +24,5 @@ class AppImages {
   static const String person6 = "assets/images/person_6.png";
   static const String person7 = "assets/images/person_7.png";
   static const String person8 = "assets/images/person_8.png";
+  static const String historyGraph = "assets/images/history_graph.png";
 }
