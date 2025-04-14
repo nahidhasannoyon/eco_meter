@@ -1,4 +1,5 @@
 import 'package:eco_meter/app/core/constants/app_imports.dart';
+import 'package:eco_meter/app/core/widgets/stacked_images_widget.dart';
 
 class DetailsPage extends GetView<DetailsController> {
   const DetailsPage({super.key});
@@ -203,30 +204,8 @@ class DetailsPage extends GetView<DetailsController> {
                           fontSize: 24,
                         ),
                       ),
-                      Stack(
-                        // TODO: Update the image section
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                          ),
-                          Positioned(
-                            top: 2.5,
-                            left: 2.5,
-                            child: Image(
-                              image: AssetImage(
-                                AppImages.userPic, // Replace with your icon
-                              ),
-                              width: 36,
-                              height: 36,
-                            ),
-                          ),
-                        ],
-                      ),
+
+                      StackedImagesWidget(),
                     ],
                   ),
                 ),
