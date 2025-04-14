@@ -1,5 +1,4 @@
 import 'package:eco_meter/app/core/constants/app_imports.dart';
-import 'package:eco_meter/app/core/widgets/stacked_images_widget.dart';
 
 class MyPlaceTileWid extends StatelessWidget {
   const MyPlaceTileWid({super.key});
