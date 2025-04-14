@@ -15,4 +15,13 @@ class AppImages {
   static const String msLogo = "assets/images/ms_logo.png";
   static const String office = "assets/images/office.png";
   static const String userPic = "assets/images/user_pic.png";
+  static const String homeIcon = "assets/images/home_icon.png";
+  static const String person1 = "assets/images/person_1.png";
+  static const String person2 = "assets/images/person_2.png";
+  static const String person3 = "assets/images/person_3.png";
+  static const String person4 = "assets/images/person_4.png";
+  static const String person5 = "assets/images/person_5.png";
+  static const String person6 = "assets/images/person_6.png";
+  static const String person7 = "assets/images/person_7.png";
+  static const String person8 = "assets/images/person_8.png";
 }
