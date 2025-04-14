@@ -1,20 +1,16 @@
 import 'package:eco_meter/app/core/constants/app_imports.dart';
 
 class SignUpController extends GetxController {
-  //TODO: Implement SignUpController.
+  final formKey = GlobalKey<FormState>();
+  final nameController = TextEditingController();
+  final phoneController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  RxBool isPasswordVisible = false.obs;
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
+  void togglePasswordVisibility() {
+    isPasswordVisible.value = !isPasswordVisible.value;
   }
 }
