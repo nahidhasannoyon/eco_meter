@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "577661296668",
+    "project_id": "eco-meter-3ec21",
+    "storage_bucket": "eco-meter-3ec21.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577661296668:android:14d99479bebde6dee63fd9",
+        "android_client_info": {
+          "package_name": "com.example.eco_meter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyConit6KLMU2-EgKgMF8qNKZAkvK5JAaLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

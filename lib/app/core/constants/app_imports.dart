@@ -61,6 +61,10 @@ export 'package:eco_meter/app/routes/sign_up_routes.dart';
 export 'package:eco_meter/app/routes/splash_routes.dart';
 export 'package:eco_meter/app/routes/verify_otp_routes.dart';
 export 'package:eco_meter/main.dart';
+export 'package:firebase_core/firebase_core.dart';
+export 'package:flutter/foundation.dart'
+    show defaultTargetPlatform, kIsWeb, TargetPlatform;
+export 'package:eco_meter/app/core/config/firebase_options.dart';
 export 'package:flutter/foundation.dart';
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';

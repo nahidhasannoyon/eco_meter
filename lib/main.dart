@@ -1,6 +1,8 @@
 import 'package:eco_meter/app/core/constants/app_imports.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeApp();
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
