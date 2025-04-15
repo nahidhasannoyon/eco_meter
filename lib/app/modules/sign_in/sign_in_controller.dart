@@ -21,9 +21,18 @@ class SignInController extends GetxController {
           password: passwordController.text,
         );
         if (result.user != null) {
-          log(result.user!.uid.toString());
-          log(result.user!.email.toString());
-          Get.offAllNamed(HomeRoutes.home);
+          // log(result.user!.uid.toString());
+          // log(result.user!.email.toString());
+          // fetch user data from firestore
+          final userDoc =
+              await FirebaseFirestore.instance
+                  .collection('users')
+                  .doc(result.user!.uid)
+                  .get();
+          // userDoc.data()!.forEach((key, value) {
+          //   log('$key: $value');
+          // });
+          Get.offAllNamed(HomeRoutes.home, arguments: userDoc['name']);
         } else {
           Get.snackbar(
             "Error",

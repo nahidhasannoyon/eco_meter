@@ -16,7 +16,7 @@ class StackedImagesWidget extends StatelessWidget {
               child: CircleAvatar(
                 radius: 20,
                 backgroundImage: AssetImage(
-                  AppImages.person1, // Replace with your icon
+                  "assets/images/person_${i + 1}.png",
                 ),
               ),
             ),
@@ -35,7 +35,7 @@ class StackedImagesWidget extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    '+47',
+                    '+5',
                     style: TextStyle(
                       fontFamily: AppFonts.poppins,
                       fontWeight: FontWeight.w700,

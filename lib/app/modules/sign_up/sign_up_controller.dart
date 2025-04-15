@@ -35,7 +35,7 @@ class SignUpController extends GetxController {
                 'phone': phoneController.text,
                 'email': emailController.text,
               });
-          Get.offAllNamed(HomeRoutes.home);
+          Get.offAllNamed(HomeRoutes.home, arguments: nameController.text);
         } else {
           Get.snackbar(
             "Error",

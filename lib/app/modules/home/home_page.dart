@@ -5,6 +5,7 @@ class HomePage extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
+    final userName = Get.arguments as String;
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -38,7 +39,7 @@ class HomePage extends GetView<HomeController> {
                             ),
                           ),
                           Text(
-                            'Ahmed Ariyan',
+                            userName,
                             style: TextStyle(
                               fontFamily: AppFonts.poppins,
                               fontSize: 24,
