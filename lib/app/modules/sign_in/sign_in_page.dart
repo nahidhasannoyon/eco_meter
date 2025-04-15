@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:eco_meter/app/core/constants/app_imports.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class SignInPage extends GetView<SignInController> {
   const SignInPage({super.key});
@@ -6,14 +9,12 @@ class SignInPage extends GetView<SignInController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Flex(
-          direction: Axis.vertical,
-          children: [
-            Flexible(
-              flex: 4,
-              child: Align(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Align(
                 alignment: Alignment.centerLeft,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,11 +41,9 @@ class SignInPage extends GetView<SignInController> {
                   ],
                 ),
               ),
-            ),
-            Flexible(
-              flex: 6,
-              child: Form(
+              Form(
                 key: controller.formKey,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +75,8 @@ class SignInPage extends GetView<SignInController> {
                     ),
                     const SizedBox(height: 20),
                     TextFormField(
-                      obscureText: controller.isPasswordVisible.value,
+                      obscureText: !controller.isPasswordVisible.value,
+                      controller: controller.passwordController,
                       validator:
                           (value) => Validators.validatePassword(value ?? ''),
                       decoration: InputDecoration(
@@ -154,13 +154,28 @@ class SignInPage extends GetView<SignInController> {
                           backgroundColor: Color(0xFF47BA80),
                           padding: const EdgeInsets.symmetric(vertical: 15),
                         ),
-                        onPressed: () {
-                          // if (controller.formKey.currentState!.validate()) {
-
-                          // Todo Perform sign-in action
-                          // After sign-in, navigate to the next page
-                          Get.offAllNamed(HomeRoutes.home);
-                          // }
+                        onPressed: () async {
+                          if (controller.formKey.currentState!.validate()) {
+                            await FirebaseAuth.instance
+                                .signInWithEmailAndPassword(
+                                  email: controller.emailController.text,
+                                  password: controller.passwordController.text,
+                                )
+                                .then((result) {
+                                  if (result.user != null) {
+                                    log(result.user!.uid.toString());
+                                    log(result.user!.email.toString());
+                                    Get.offAllNamed(HomeRoutes.home);
+                                  } else {
+                                    Get.snackbar(
+                                      "Error",
+                                      "Invalid email or password",
+                                      backgroundColor: Colors.red,
+                                      colorText: Colors.white,
+                                    );
+                                  }
+                                });
+                          }
                         },
                         child: const Text(
                           "Sign In",
@@ -175,10 +190,7 @@ class SignInPage extends GetView<SignInController> {
                   ],
                 ),
               ),
-            ),
-            Flexible(
-              flex: 2,
-              child: Column(
+              Column(
                 children: [
                   Align(
                     alignment: Alignment.center,
@@ -206,11 +218,8 @@ class SignInPage extends GetView<SignInController> {
                   ),
                 ],
               ),
-            ),
-            const SizedBox(height: 20),
-            Flexible(
-              flex: 3,
-              child: Column(
+              const SizedBox(height: 20),
+              Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -264,8 +273,8 @@ class SignInPage extends GetView<SignInController> {
                   const SizedBox(height: 20),
                 ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -1,7 +1,8 @@
 import 'package:eco_meter/app/core/constants/app_imports.dart';
 
 class SignUpController extends GetxController {
-  final formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   final nameController = TextEditingController();
   final phoneController = TextEditingController();
   final emailController = TextEditingController();
