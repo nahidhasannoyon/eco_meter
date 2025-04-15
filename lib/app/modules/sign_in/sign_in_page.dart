@@ -1,7 +1,4 @@
-import 'dart:developer';
-
 import 'package:eco_meter/app/core/constants/app_imports.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 class SignInPage extends GetView<SignInController> {
   const SignInPage({super.key});
@@ -149,41 +146,31 @@ class SignInPage extends GetView<SignInController> {
                     const SizedBox(height: 40),
                     SizedBox(
                       width: double.infinity,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF47BA80),
-                          padding: const EdgeInsets.symmetric(vertical: 15),
-                        ),
-                        onPressed: () async {
-                          if (controller.formKey.currentState!.validate()) {
-                            await FirebaseAuth.instance
-                                .signInWithEmailAndPassword(
-                                  email: controller.emailController.text,
-                                  password: controller.passwordController.text,
-                                )
-                                .then((result) {
-                                  if (result.user != null) {
-                                    log(result.user!.uid.toString());
-                                    log(result.user!.email.toString());
-                                    Get.offAllNamed(HomeRoutes.home);
-                                  } else {
-                                    Get.snackbar(
-                                      "Error",
-                                      "Invalid email or password",
-                                      backgroundColor: Colors.red,
-                                      colorText: Colors.white,
-                                    );
-                                  }
-                                });
-                          }
-                        },
-                        child: const Text(
-                          "Sign In",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
+                      child: Obx(
+                        () => ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF47BA80),
+                            padding: const EdgeInsets.symmetric(vertical: 15),
                           ),
+                          onPressed:
+                              controller.isLoading.value
+                                  ? () {}
+                                  : () async {
+                                    await controller.signIn();
+                                  },
+                          child:
+                              controller.isLoading.value
+                                  ? const CircularProgressIndicator(
+                                    color: Colors.white,
+                                  )
+                                  : const Text(
+                                    "Sign In",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.white,
+                                    ),
+                                  ),
                         ),
                       ),
                     ),

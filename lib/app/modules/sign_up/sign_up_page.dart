@@ -1,8 +1,4 @@
-import 'dart:developer';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eco_meter/app/core/constants/app_imports.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 class SignUpPage extends GetView<SignUpController> {
   const SignUpPage({super.key});
@@ -225,52 +221,31 @@ class SignUpPage extends GetView<SignUpController> {
                     const SizedBox(height: 40),
                     SizedBox(
                       width: double.infinity,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF47BA80),
-                          padding: const EdgeInsets.symmetric(vertical: 15),
-                        ),
-                        onPressed: () async {
-                          // Validate the form fields
-                          if (controller.formKey.currentState!.validate()) {
-                            final result = await FirebaseAuth.instance
-                                .createUserWithEmailAndPassword(
-                                  email: controller.emailController.text,
-                                  password: controller.passwordController.text,
-                                );
-                            log(result.toString());
-                            if (result.user != null) {
-                              // User successfully signed up
-                              // You can save user data to Firestore or perform other actions here
-                              final user = result.user;
-                              await FirebaseFirestore.instance
-                                  .collection('users')
-                                  .doc(user!.uid)
-                                  .set({
-                                    'name': controller.nameController.text,
-                                    'phone': controller.phoneController.text,
-                                    'email': controller.emailController.text,
-                                  });
-                              // After sign-up, navigate to the next page
-                              Get.offAllNamed(HomeRoutes.home);
-                            } else {
-                              // Handle sign-up error
-                              Get.snackbar(
-                                "Error",
-                                "Sign up failed. Please try again.",
-                                backgroundColor: Colors.red,
-                                colorText: Colors.white,
-                              );
-                            }
-                          }
-                        },
-                        child: const Text(
-                          "Sign Up",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
+                      child: Obx(
+                        () => ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF47BA80),
+                            padding: const EdgeInsets.symmetric(vertical: 15),
                           ),
+                          onPressed:
+                              controller.isLoading.value
+                                  ? () {}
+                                  : () async {
+                                    await controller.signUp();
+                                  },
+                          child:
+                              controller.isLoading.value
+                                  ? const CircularProgressIndicator(
+                                    color: Colors.white,
+                                  )
+                                  : Text(
+                                    "Sign Up",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.white,
+                                    ),
+                                  ),
                         ),
                       ),
                     ),
@@ -293,21 +268,7 @@ class SignUpPage extends GetView<SignUpController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  GestureDetector(
-                    // TODO: Implement Google Sign-In
-                    // onTap: () {
-                    // final google = GoogleAuthProvider();
-                    // final credential = GoogleAuthProvider.credential(
-                    //   accessToken: google.,
-                    //   idToken: google.idToken,
-                    // );
-                    // },
-                    child: Image.asset(
-                      AppImages.googleLogo,
-                      width: 40,
-                      height: 40,
-                    ),
-                  ),
+                  Image.asset(AppImages.googleLogo, width: 40, height: 40),
                   const SizedBox(width: 20),
                   Image.asset(AppImages.fbLogo, width: 40, height: 40),
                   const SizedBox(width: 20),
