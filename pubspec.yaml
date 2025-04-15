@@ -93,7 +93,7 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 
   fonts:
-    - family: Inter_18pt
+    - family: Inter
       fonts:
         - asset: assets/fonts/inter/Inter_18pt-Black.ttf
           weight: 900
@@ -140,8 +140,6 @@ flutter:
         - asset: assets/fonts/inter/Inter_18pt-ThinItalic.ttf
           weight: 100
           style: italic
-    - family: Inter_24pt
-      fonts:
         - asset: assets/fonts/inter/Inter_24pt-Black.ttf
           weight: 900
         - asset: assets/fonts/inter/Inter_24pt-BlackItalic.ttf
@@ -187,8 +185,6 @@ flutter:
         - asset: assets/fonts/inter/Inter_24pt-ThinItalic.ttf
           weight: 100
           style: italic
-    - family: Inter_28pt
-      fonts:
         - asset: assets/fonts/inter/Inter_28pt-Black.ttf
           weight: 900
         - asset: assets/fonts/inter/Inter_28pt-BlackItalic.ttf

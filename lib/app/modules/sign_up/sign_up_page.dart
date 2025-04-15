@@ -17,6 +17,7 @@ class SignUpPage extends GetView<SignUpController> {
               Text(
                 "Sign Up",
                 style: TextStyle(
+                  fontFamily: AppFonts.poppins,
                   fontSize: 30,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
@@ -26,6 +27,7 @@ class SignUpPage extends GetView<SignUpController> {
               const Text(
                 "Let’s save environment together",
                 style: TextStyle(
+                  fontFamily: AppFonts.inter,
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
@@ -47,6 +49,7 @@ class SignUpPage extends GetView<SignUpController> {
                         label: Text(
                           "Name",
                           style: TextStyle(
+                            fontFamily: AppFonts.poppins,
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
@@ -55,6 +58,7 @@ class SignUpPage extends GetView<SignUpController> {
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         hintText: "e.g: Ahmed Ariyan",
                         hintStyle: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Color(0xFFD6D6D6),
@@ -76,6 +80,7 @@ class SignUpPage extends GetView<SignUpController> {
                         label: Text(
                           "Phone Number",
                           style: TextStyle(
+                            fontFamily: AppFonts.poppins,
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
@@ -93,6 +98,7 @@ class SignUpPage extends GetView<SignUpController> {
                               Text(
                                 " +880",
                                 style: TextStyle(
+                                  fontFamily: AppFonts.inter,
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xFF9F9F9F),
@@ -107,6 +113,7 @@ class SignUpPage extends GetView<SignUpController> {
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         hintText: " 17XXXXXXXX",
                         hintStyle: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontSize: 16,
                           color: Color(0xFFD6D6D6),
                         ),
@@ -125,6 +132,7 @@ class SignUpPage extends GetView<SignUpController> {
                         label: Text(
                           "Email",
                           style: TextStyle(
+                            fontFamily: AppFonts.poppins,
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
@@ -133,6 +141,7 @@ class SignUpPage extends GetView<SignUpController> {
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         hintText: "user@example.com",
                         hintStyle: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontSize: 16,
                           color: Color(0xFFD6D6D6),
                         ),
@@ -163,6 +172,7 @@ class SignUpPage extends GetView<SignUpController> {
                           label: Text(
                             "Password",
                             style: TextStyle(
+                              fontFamily: AppFonts.poppins,
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
@@ -171,6 +181,7 @@ class SignUpPage extends GetView<SignUpController> {
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           hintText: "**********",
                           hintStyle: TextStyle(
+                            fontFamily: AppFonts.inter,
                             fontSize: 16,
                             color: Color(0xFFD6D6D6),
                           ),
@@ -205,6 +216,7 @@ class SignUpPage extends GetView<SignUpController> {
                           label: Text(
                             "Confirm Password",
                             style: TextStyle(
+                              fontFamily: AppFonts.poppins,
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
@@ -213,6 +225,7 @@ class SignUpPage extends GetView<SignUpController> {
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           hintText: "**********",
                           hintStyle: TextStyle(
+                            fontFamily: AppFonts.inter,
                             fontSize: 16,
                             color: Color(0xFFD6D6D6),
                           ),
@@ -245,6 +258,7 @@ class SignUpPage extends GetView<SignUpController> {
                                   : Text(
                                     "Sign Up",
                                     style: TextStyle(
+                                      fontFamily: AppFonts.inter,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
@@ -262,6 +276,7 @@ class SignUpPage extends GetView<SignUpController> {
                 child: const Text(
                   "Or Sign Up with",
                   style: TextStyle(
+                    fontFamily: AppFonts.inter,
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
                     color: Color(0xFFADADAD),
@@ -301,6 +316,7 @@ class SignUpPage extends GetView<SignUpController> {
                     child: const Text(
                       "Sign In",
                       style: TextStyle(
+                        fontFamily: AppFonts.inter,
                         fontSize: 14,
                         fontWeight: FontWeight.w700,
                         color: Color(0xFF47BA80),
@@ -316,12 +332,17 @@ class SignUpPage extends GetView<SignUpController> {
                 children: [
                   Text(
                     'Powered by',
-                    style: TextStyle(fontSize: 12, color: Colors.grey),
+                    style: TextStyle(
+                      fontFamily: AppFonts.inter,
+                      fontSize: 12,
+                      color: Colors.grey,
+                    ),
                   ),
                   const SizedBox(width: 5),
                   Text(
                     'M360 ICT',
                     style: TextStyle(
+                      fontFamily: AppFonts.inter,
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
                       color: Colors.green,

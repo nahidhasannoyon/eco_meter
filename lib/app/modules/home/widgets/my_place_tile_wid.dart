@@ -34,6 +34,7 @@ class MyPlaceTileWid extends StatelessWidget {
         Text(
           'Home',
           style: TextStyle(
+            fontFamily: AppFonts.poppins,
             fontSize: 16,
             fontWeight: FontWeight.w500,
             color: Color(0xFF1E1E1E),
@@ -45,6 +46,7 @@ class MyPlaceTileWid extends StatelessWidget {
             Text(
               '652',
               style: TextStyle(
+                fontFamily: AppFonts.poppins,
                 fontSize: 48,
                 fontWeight: FontWeight.w300,
                 color: Color(0xFF47BA80),
@@ -68,6 +70,7 @@ class MyPlaceTileWid extends StatelessWidget {
                       Text(
                         '13%',
                         style: TextStyle(
+                          fontFamily: AppFonts.poppins,
                           fontSize: 10,
                           fontWeight: FontWeight.w300,
                           color: Colors.white,
@@ -79,6 +82,7 @@ class MyPlaceTileWid extends StatelessWidget {
                 Text(
                   'ppm',
                   style: TextStyle(
+                    fontFamily: AppFonts.poppins,
                     fontSize: 16,
                     fontWeight: FontWeight.w300,
                     color: Color(0xFF47BA80),
@@ -106,6 +110,7 @@ class MyPlaceTileWid extends StatelessWidget {
           child: Text(
             'Good',
             style: TextStyle(
+              fontFamily: AppFonts.inter,
               fontSize: 12,
               fontWeight: FontWeight.w700,
               color: Colors.white,
@@ -122,6 +127,7 @@ class MyPlaceTileWid extends StatelessWidget {
                 Text(
                   'View Details',
                   style: TextStyle(
+                    fontFamily: AppFonts.poppins,
                     fontSize: 12,
                     fontWeight: FontWeight.w500,
                     color: Color(0xFF47BA80),

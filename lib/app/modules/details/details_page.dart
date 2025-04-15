@@ -25,7 +25,11 @@ class DetailsPage extends GetView<DetailsController> {
             const SizedBox(width: 10),
             const Text(
               'Home',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w300),
+              style: TextStyle(
+                fontFamily: AppFonts.poppins,
+                fontSize: 24,
+                fontWeight: FontWeight.w300,
+              ),
             ),
           ],
         ),
@@ -42,6 +46,7 @@ class DetailsPage extends GetView<DetailsController> {
               child: Text(
                 'Good',
                 style: TextStyle(
+                  fontFamily: AppFonts.inter,
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                   color: Colors.white,
@@ -64,6 +69,7 @@ class DetailsPage extends GetView<DetailsController> {
                     Text(
                       '652',
                       style: TextStyle(
+                        fontFamily: AppFonts.poppins,
                         fontSize: 48,
                         fontWeight: FontWeight.w300,
                         color: Color(0xFF47BA80),
@@ -87,6 +93,7 @@ class DetailsPage extends GetView<DetailsController> {
                               Text(
                                 '13%',
                                 style: TextStyle(
+                                  fontFamily: AppFonts.poppins,
                                   fontSize: 10,
                                   fontWeight: FontWeight.w300,
                                   color: Colors.white,
@@ -98,6 +105,7 @@ class DetailsPage extends GetView<DetailsController> {
                         Text(
                           'ppm',
                           style: TextStyle(
+                            fontFamily: AppFonts.poppins,
                             fontSize: 16,
                             fontWeight: FontWeight.w300,
                             color: Color(0xFF47BA80),
@@ -159,6 +167,7 @@ class DetailsPage extends GetView<DetailsController> {
                 Text(
                   'History',
                   style: TextStyle(
+                    fontFamily: AppFonts.inter,
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
                     color: Color(0xFF838383),
@@ -169,6 +178,7 @@ class DetailsPage extends GetView<DetailsController> {
                     Text(
                       'See all',
                       style: TextStyle(
+                        fontFamily: AppFonts.inter,
                         fontSize: 14,
                         color: Color(0xFFADADAD),
                         fontWeight: FontWeight.w400,
@@ -199,6 +209,7 @@ class DetailsPage extends GetView<DetailsController> {
                       Text(
                         'Persons',
                         style: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontWeight: FontWeight.w700,
                           fontSize: 24,
                         ),
@@ -224,6 +235,7 @@ class DetailsPage extends GetView<DetailsController> {
                       Text(
                         'Rooms',
                         style: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontWeight: FontWeight.w700,
                           fontSize: 24,
                           color: Colors.white,
@@ -232,6 +244,7 @@ class DetailsPage extends GetView<DetailsController> {
                       Text(
                         '5',
                         style: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontWeight: FontWeight.w700,
                           fontSize: 48,
                           color: Colors.white,
@@ -246,6 +259,7 @@ class DetailsPage extends GetView<DetailsController> {
                         child: Text(
                           '2 of them requires action',
                           style: TextStyle(
+                            fontFamily: AppFonts.inter,
                             fontWeight: FontWeight.w500,
                             fontSize: 10,
                             color: Color(0xff47ba80),
@@ -277,6 +291,7 @@ class DetailsPage extends GetView<DetailsController> {
                         Text(
                           'Plants',
                           style: TextStyle(
+                            fontFamily: AppFonts.inter,
                             fontWeight: FontWeight.w700,
                             fontSize: 24,
                             color: Color(0xFF47BA80),
@@ -305,6 +320,7 @@ class DetailsPage extends GetView<DetailsController> {
                       child: Text(
                         '43',
                         style: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontWeight: FontWeight.w700,
                           fontSize: 80,
                           color: Colors.white,

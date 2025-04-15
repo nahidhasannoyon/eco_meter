@@ -21,6 +21,7 @@ class SignInPage extends GetView<SignInController> {
                     Text(
                       "Sign In",
                       style: TextStyle(
+                        fontFamily: AppFonts.poppins,
                         fontSize: 30,
                         fontWeight: FontWeight.w500,
                         color: Colors.black,
@@ -30,6 +31,7 @@ class SignInPage extends GetView<SignInController> {
                     const Text(
                       "Let’s save environment together",
                       style: TextStyle(
+                        fontFamily: AppFonts.inter,
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         color: Colors.black,
@@ -54,6 +56,7 @@ class SignInPage extends GetView<SignInController> {
                         label: Text(
                           "Email",
                           style: TextStyle(
+                            fontFamily: AppFonts.poppins,
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
@@ -62,6 +65,7 @@ class SignInPage extends GetView<SignInController> {
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         hintText: "user@example.com",
                         hintStyle: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontSize: 16,
                           color: Color(0xFFD6D6D6),
                         ),
@@ -92,6 +96,7 @@ class SignInPage extends GetView<SignInController> {
                           label: Text(
                             "Password",
                             style: TextStyle(
+                              fontFamily: AppFonts.poppins,
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
@@ -100,6 +105,7 @@ class SignInPage extends GetView<SignInController> {
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           hintText: "**********",
                           hintStyle: TextStyle(
+                            fontFamily: AppFonts.inter,
                             fontSize: 16,
                             color: Color(0xFFD6D6D6),
                           ),
@@ -125,6 +131,7 @@ class SignInPage extends GetView<SignInController> {
                             const Text(
                               "Remember me",
                               style: TextStyle(
+                                fontFamily: AppFonts.inter,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.black,
@@ -137,6 +144,7 @@ class SignInPage extends GetView<SignInController> {
                           child: const Text(
                             "Forgotten Password",
                             style: TextStyle(
+                              fontFamily: AppFonts.inter,
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
                               color: Color(0xFF47BA80),
@@ -168,6 +176,7 @@ class SignInPage extends GetView<SignInController> {
                                   : const Text(
                                     "Sign In",
                                     style: TextStyle(
+                                      fontFamily: AppFonts.inter,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
@@ -186,6 +195,7 @@ class SignInPage extends GetView<SignInController> {
                     child: const Text(
                       "Or Sign In with",
                       style: TextStyle(
+                        fontFamily: AppFonts.inter,
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
                         color: Color(0xFFADADAD),
@@ -218,6 +228,7 @@ class SignInPage extends GetView<SignInController> {
                       const Text(
                         "Don’t have an account?",
                         style: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           color: Color(0xFFADADAD),
@@ -231,6 +242,7 @@ class SignInPage extends GetView<SignInController> {
                         child: const Text(
                           "Sign Up",
                           style: TextStyle(
+                            fontFamily: AppFonts.inter,
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
                             color: Color(0xFF47BA80),
@@ -246,12 +258,17 @@ class SignInPage extends GetView<SignInController> {
                     children: [
                       Text(
                         'Powered by',
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
+                          fontFamily: AppFonts.inter,
+                        ),
                       ),
                       const SizedBox(width: 5),
                       Text(
                         'M360 ICT',
                         style: TextStyle(
+                          fontFamily: AppFonts.inter,
                           fontSize: 14,
                           fontWeight: FontWeight.w700,
                           color: Colors.green,

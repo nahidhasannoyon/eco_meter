@@ -31,6 +31,7 @@ class HomePage extends GetView<HomeController> {
                           Text(
                             'Good Morning',
                             style: TextStyle(
+                              fontFamily: AppFonts.poppins,
                               fontSize: 16,
                               fontWeight: FontWeight.w300,
                               color: Color(0xFF838383),
@@ -39,6 +40,7 @@ class HomePage extends GetView<HomeController> {
                           Text(
                             'Ahmed Ariyan',
                             style: TextStyle(
+                              fontFamily: AppFonts.poppins,
                               fontSize: 24,
                               fontWeight: FontWeight.w500,
                               color: Color(0xFF1E1E1E),
@@ -59,6 +61,7 @@ class HomePage extends GetView<HomeController> {
                     text: TextSpan(
                       text: 'You are in a ',
                       style: TextStyle(
+                        fontFamily: AppFonts.poppins,
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
                         color: Color(0xFF838383),
@@ -67,6 +70,7 @@ class HomePage extends GetView<HomeController> {
                         TextSpan(
                           text: 'healthy ',
                           style: TextStyle(
+                            fontFamily: AppFonts.poppins,
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
                             color: Color(0xFF47BA80),
@@ -75,6 +79,7 @@ class HomePage extends GetView<HomeController> {
                         TextSpan(
                           text: 'environment',
                           style: TextStyle(
+                            fontFamily: AppFonts.poppins,
                             fontSize: 14,
                             fontWeight: FontWeight.w300,
                             color: Color(0xFF838383),
@@ -95,7 +100,12 @@ class HomePage extends GetView<HomeController> {
                 children: [
                   Text(
                     'My Places',
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: TextStyle(
+                      fontFamily: AppFonts.poppins,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w300,
+                      color: Color(0xFF1E1E1E),
+                    ),
                   ),
                   ListView.builder(
                     itemBuilder: (context, index) {
@@ -115,6 +125,7 @@ class HomePage extends GetView<HomeController> {
           child: Text(
             '+',
             style: TextStyle(
+              fontFamily: AppFonts.poppins,
               fontSize: 34,
               fontWeight: FontWeight.w300,
               color: Colors.white,

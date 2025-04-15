@@ -37,6 +37,7 @@ class StackedImagesWidget extends StatelessWidget {
                   child: Text(
                     '+47',
                     style: TextStyle(
+                      fontFamily: AppFonts.poppins,
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
                       fontSize: 16,

@@ -25,12 +25,17 @@ class SplashPage extends GetView<SplashController> {
               children: [
                 Text(
                   'Powered by',
-                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                  style: TextStyle(
+                    fontFamily: AppFonts.inter,
+                    fontSize: 12,
+                    color: Colors.grey,
+                  ),
                 ),
                 const SizedBox(width: 5),
                 Text(
                   'M360 ICT',
                   style: TextStyle(
+                    fontFamily: AppFonts.inter,
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
                     color: Colors.green,
