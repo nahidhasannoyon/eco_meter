@@ -7,13 +7,8 @@ class AppPages {
 
   static final routes = [
     ...SignInRoutes.routes,
-    ...SentOtpRoutes.routes,
-    ...VerifyOtpRoutes.routes,
-    ...ResetPasswordRoutes.routes,
     ...SignUpRoutes.routes,
     ...DetailsRoutes.routes,
-    ...AddRoutes.routes,
-    ...ResultRoutes.routes,
     ...SplashRoutes.routes,
     ...HomeRoutes.routes,
   ];
