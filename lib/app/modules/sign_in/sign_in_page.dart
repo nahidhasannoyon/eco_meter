@@ -71,39 +71,41 @@ class SignInPage extends GetView<SignInController> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    TextFormField(
-                      obscureText: !controller.isPasswordVisible.value,
-                      controller: controller.passwordController,
-                      validator:
-                          (value) => Validators.validatePassword(value ?? ''),
-                      decoration: InputDecoration(
-                        suffixIcon: IconButton(
-                          onPressed: () {
-                            controller.togglePasswordVisibility();
-                          },
-                          icon:
-                              controller.isPasswordVisible.value
-                                  ? Icon(Icons.visibility)
-                                  : Icon(Icons.visibility_off),
-                          iconSize: 20,
-                          color: Color(0xFFD6D6D6),
-                        ),
-                        label: Text(
-                          "Password",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
+                    Obx(
+                      () => TextFormField(
+                        obscureText: !controller.isPasswordVisible.value,
+                        controller: controller.passwordController,
+                        validator:
+                            (value) => Validators.validatePassword(value ?? ''),
+                        decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              controller.togglePasswordVisibility();
+                            },
+                            icon:
+                                controller.isPasswordVisible.value
+                                    ? Icon(Icons.visibility)
+                                    : Icon(Icons.visibility_off),
+                            iconSize: 20,
+                            color: Color(0xFFD6D6D6),
                           ),
-                        ),
-                        floatingLabelBehavior: FloatingLabelBehavior.always,
-                        hintText: "**********",
-                        hintStyle: TextStyle(
-                          fontSize: 16,
-                          color: Color(0xFFD6D6D6),
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                          label: Text(
+                            "Password",
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
+                          ),
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                          hintText: "**********",
+                          hintStyle: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xFFD6D6D6),
+                          ),
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                          ),
                         ),
                       ),
                     ),

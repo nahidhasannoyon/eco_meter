@@ -142,79 +142,83 @@ class SignUpPage extends GetView<SignUpController> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    TextFormField(
-                      controller: controller.passwordController,
-                      obscureText: !controller.isPasswordVisible.value,
-                      validator:
-                          (value) => Validators.validatePassword(value ?? ''),
-                      decoration: InputDecoration(
-                        suffixIcon: IconButton(
-                          onPressed: () {
-                            controller.togglePasswordVisibility();
-                          },
-                          icon:
-                              controller.isPasswordVisible.value
-                                  ? Icon(Icons.visibility)
-                                  : Icon(Icons.visibility_off),
-                          iconSize: 20,
-                          color: Color(0xFFD6D6D6),
-                        ),
-                        label: Text(
-                          "Password",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
+                    Obx(
+                      () => TextFormField(
+                        controller: controller.passwordController,
+                        obscureText: !controller.isPasswordVisible.value,
+                        validator:
+                            (value) => Validators.validatePassword(value ?? ''),
+                        decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              controller.togglePasswordVisibility();
+                            },
+                            icon:
+                                controller.isPasswordVisible.value
+                                    ? Icon(Icons.visibility)
+                                    : Icon(Icons.visibility_off),
+                            iconSize: 20,
+                            color: Color(0xFFD6D6D6),
                           ),
-                        ),
-                        floatingLabelBehavior: FloatingLabelBehavior.always,
-                        hintText: "**********",
-                        hintStyle: TextStyle(
-                          fontSize: 16,
-                          color: Color(0xFFD6D6D6),
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                          label: Text(
+                            "Password",
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
+                          ),
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                          hintText: "**********",
+                          hintStyle: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xFFD6D6D6),
+                          ),
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                          ),
                         ),
                       ),
                     ),
                     const SizedBox(height: 10),
-                    TextFormField(
-                      controller: controller.confirmPasswordController,
-                      obscureText: !controller.isPasswordVisible.value,
-                      validator:
-                          (value) => Validators.validateConfirmPassword(
-                            controller.passwordController.text,
-                            value ?? '',
+                    Obx(
+                      () => TextFormField(
+                        controller: controller.confirmPasswordController,
+                        obscureText: !controller.isPasswordVisible.value,
+                        validator:
+                            (value) => Validators.validateConfirmPassword(
+                              controller.passwordController.text,
+                              value ?? '',
+                            ),
+                        decoration: InputDecoration(
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              controller.togglePasswordVisibility();
+                            },
+                            icon:
+                                controller.isPasswordVisible.value
+                                    ? Icon(Icons.visibility)
+                                    : Icon(Icons.visibility_off),
+                            iconSize: 20,
+                            color: Color(0xFFD6D6D6),
                           ),
-                      decoration: InputDecoration(
-                        suffixIcon: IconButton(
-                          onPressed: () {
-                            controller.togglePasswordVisibility();
-                          },
-                          icon:
-                              controller.isPasswordVisible.value
-                                  ? Icon(Icons.visibility)
-                                  : Icon(Icons.visibility_off),
-                          iconSize: 20,
-                          color: Color(0xFFD6D6D6),
-                        ),
-                        label: Text(
-                          "Confirm Password",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
+                          label: Text(
+                            "Confirm Password",
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
                           ),
-                        ),
-                        floatingLabelBehavior: FloatingLabelBehavior.always,
-                        hintText: "**********",
-                        hintStyle: TextStyle(
-                          fontSize: 16,
-                          color: Color(0xFFD6D6D6),
-                        ),
-                        border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                          hintText: "**********",
+                          hintStyle: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xFFD6D6D6),
+                          ),
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black),
+                          ),
                         ),
                       ),
                     ),
