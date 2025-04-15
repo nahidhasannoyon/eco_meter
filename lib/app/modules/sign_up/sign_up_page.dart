@@ -8,32 +8,32 @@ class SignUpPage extends GetView<SignUpController> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0).w,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Text(
                 "Sign Up",
                 style: TextStyle(
                   fontFamily: AppFonts.poppins,
-                  fontSize: 30,
+                  fontSize: 30.sp,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),
               ),
-              const SizedBox(height: 10),
-              const Text(
+              SizedBox(height: 10.h),
+              Text(
                 "Let’s save environment together",
                 style: TextStyle(
                   fontFamily: AppFonts.inter,
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
                 ),
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Form(
                 key: controller.formKey,
                 autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -45,12 +45,12 @@ class SignUpPage extends GetView<SignUpController> {
                       validator:
                           (value) => Validators.validateName(value ?? ''),
                       controller: controller.nameController,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         label: Text(
                           "Name",
                           style: TextStyle(
                             fontFamily: AppFonts.poppins,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
                           ),
@@ -59,7 +59,7 @@ class SignUpPage extends GetView<SignUpController> {
                         hintText: "e.g: Ahmed Ariyan",
                         hintStyle: TextStyle(
                           fontFamily: AppFonts.inter,
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           fontWeight: FontWeight.w400,
                           color: Color(0xFFD6D6D6),
                         ),
@@ -68,7 +68,7 @@ class SignUpPage extends GetView<SignUpController> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     TextFormField(
                       validator:
                           (value) =>
@@ -76,30 +76,30 @@ class SignUpPage extends GetView<SignUpController> {
                       // maxLength: 11,
                       controller: controller.phoneController,
                       keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         label: Text(
                           "Phone Number",
                           style: TextStyle(
                             fontFamily: AppFonts.poppins,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
                           ),
                         ),
                         prefix: SizedBox(
-                          width: 70,
+                          width: 70.w,
                           child: Row(
                             children: [
                               Image(
                                 image: AssetImage(AppImages.bdFlag),
-                                width: 23,
-                                height: 15,
+                                width: 23.w,
+                                height: 15.h,
                               ),
                               Text(
                                 " +880",
                                 style: TextStyle(
                                   fontFamily: AppFonts.inter,
-                                  fontSize: 14,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xFF9F9F9F),
                                 ),
@@ -114,7 +114,7 @@ class SignUpPage extends GetView<SignUpController> {
                         hintText: " 17XXXXXXXX",
                         hintStyle: TextStyle(
                           fontFamily: AppFonts.inter,
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           color: Color(0xFFD6D6D6),
                         ),
                         border: UnderlineInputBorder(
@@ -122,18 +122,18 @@ class SignUpPage extends GetView<SignUpController> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     TextFormField(
                       keyboardType: TextInputType.emailAddress,
                       controller: controller.emailController,
                       validator:
                           (value) => Validators.validateEmail(value ?? ''),
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         label: Text(
                           "Email",
                           style: TextStyle(
                             fontFamily: AppFonts.poppins,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
                           ),
@@ -142,7 +142,7 @@ class SignUpPage extends GetView<SignUpController> {
                         hintText: "user@example.com",
                         hintStyle: TextStyle(
                           fontFamily: AppFonts.inter,
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           color: Color(0xFFD6D6D6),
                         ),
                         border: UnderlineInputBorder(
@@ -150,7 +150,7 @@ class SignUpPage extends GetView<SignUpController> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Obx(
                       () => TextFormField(
                         controller: controller.passwordController,
@@ -166,14 +166,14 @@ class SignUpPage extends GetView<SignUpController> {
                                 controller.isPasswordVisible.value
                                     ? Icon(Icons.visibility)
                                     : Icon(Icons.visibility_off),
-                            iconSize: 20,
+                            iconSize: 20.w,
                             color: Color(0xFFD6D6D6),
                           ),
                           label: Text(
                             "Password",
                             style: TextStyle(
                               fontFamily: AppFonts.poppins,
-                              fontSize: 12,
+                              fontSize: 12.sp,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
                             ),
@@ -182,7 +182,7 @@ class SignUpPage extends GetView<SignUpController> {
                           hintText: "**********",
                           hintStyle: TextStyle(
                             fontFamily: AppFonts.inter,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Color(0xFFD6D6D6),
                           ),
                           border: UnderlineInputBorder(
@@ -191,7 +191,7 @@ class SignUpPage extends GetView<SignUpController> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Obx(
                       () => TextFormField(
                         controller: controller.confirmPasswordController,
@@ -210,14 +210,14 @@ class SignUpPage extends GetView<SignUpController> {
                                 controller.isPasswordVisible.value
                                     ? Icon(Icons.visibility)
                                     : Icon(Icons.visibility_off),
-                            iconSize: 20,
+                            iconSize: 20.w,
                             color: Color(0xFFD6D6D6),
                           ),
                           label: Text(
                             "Confirm Password",
                             style: TextStyle(
                               fontFamily: AppFonts.poppins,
-                              fontSize: 12,
+                              fontSize: 12.sp,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
                             ),
@@ -226,7 +226,7 @@ class SignUpPage extends GetView<SignUpController> {
                           hintText: "**********",
                           hintStyle: TextStyle(
                             fontFamily: AppFonts.inter,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Color(0xFFD6D6D6),
                           ),
                           border: UnderlineInputBorder(
@@ -235,14 +235,14 @@ class SignUpPage extends GetView<SignUpController> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 40),
+                    SizedBox(height: 40.h),
                     SizedBox(
                       width: double.infinity,
                       child: Obx(
                         () => ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xFF47BA80),
-                            padding: const EdgeInsets.symmetric(vertical: 15),
+                            padding: EdgeInsets.symmetric(vertical: 15).w,
                           ),
                           onPressed:
                               controller.isLoading.value
@@ -252,14 +252,14 @@ class SignUpPage extends GetView<SignUpController> {
                                   },
                           child:
                               controller.isLoading.value
-                                  ? const CircularProgressIndicator(
+                                  ? CircularProgressIndicator(
                                     color: Colors.white,
                                   )
                                   : Text(
                                     "Sign Up",
                                     style: TextStyle(
                                       fontFamily: AppFonts.inter,
-                                      fontSize: 16,
+                                      fontSize: 16.sp,
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                     ),
@@ -270,54 +270,54 @@ class SignUpPage extends GetView<SignUpController> {
                   ],
                 ),
               ),
-              const SizedBox(height: 40),
+              SizedBox(height: 40.h),
               Align(
                 alignment: Alignment.center,
-                child: const Text(
+                child: Text(
                   "Or Sign Up with",
                   style: TextStyle(
                     fontFamily: AppFonts.inter,
-                    fontSize: 12,
+                    fontSize: 12.sp,
                     fontWeight: FontWeight.w400,
                     color: Color(0xFFADADAD),
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(AppImages.googleLogo, width: 40, height: 40),
-                  const SizedBox(width: 20),
-                  Image.asset(AppImages.fbLogo, width: 40, height: 40),
-                  const SizedBox(width: 20),
-                  Image.asset(AppImages.msLogo, width: 40, height: 40),
-                  const SizedBox(width: 20),
-                  Image.asset(AppImages.appleLogo, width: 40, height: 40),
+                  Image.asset(AppImages.googleLogo, width: 40.w, height: 40.h),
+                  SizedBox(width: 20.w),
+                  Image.asset(AppImages.fbLogo, width: 40.w, height: 40.h),
+                  SizedBox(width: 20.w),
+                  Image.asset(AppImages.msLogo, width: 40.w, height: 40.h),
+                  SizedBox(width: 20.w),
+                  Image.asset(AppImages.appleLogo, width: 40.w, height: 40.h),
                 ],
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  Text(
                     "Already have an account?",
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
                       color: Color(0xFFADADAD),
                     ),
                   ),
-                  const SizedBox(width: 5),
+                  SizedBox(width: 5.w),
                   InkWell(
                     onTap: () {
                       Get.offAllNamed(SignInRoutes.signIn);
                     },
-                    child: const Text(
+                    child: Text(
                       "Sign In",
                       style: TextStyle(
                         fontFamily: AppFonts.inter,
-                        fontSize: 14,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w700,
                         color: Color(0xFF47BA80),
                       ),
@@ -325,7 +325,7 @@ class SignUpPage extends GetView<SignUpController> {
                   ),
                 ],
               ),
-              const SizedBox(height: 50),
+              SizedBox(height: 50.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -334,23 +334,23 @@ class SignUpPage extends GetView<SignUpController> {
                     'Powered by',
                     style: TextStyle(
                       fontFamily: AppFonts.inter,
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       color: Colors.grey,
                     ),
                   ),
-                  const SizedBox(width: 5),
+                  SizedBox(width: 5.w),
                   Text(
                     'M360 ICT',
                     style: TextStyle(
                       fontFamily: AppFonts.inter,
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       fontWeight: FontWeight.w700,
                       color: Colors.green,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20.h),
             ],
           ),
         ),

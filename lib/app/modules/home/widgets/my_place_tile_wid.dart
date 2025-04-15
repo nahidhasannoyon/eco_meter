@@ -8,14 +8,14 @@ class MyPlaceTileWid extends StatelessWidget {
     return GestureDetector(
       onTap: () => Get.toNamed(DetailsRoutes.details),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0).w,
         child: Card(
           elevation: 2,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20).w,
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20).w,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[tileLeftHalf(), tileRightHalf()],
@@ -35,19 +35,19 @@ class MyPlaceTileWid extends StatelessWidget {
           'Home',
           style: TextStyle(
             fontFamily: AppFonts.poppins,
-            fontSize: 16,
+            fontSize: 16.sp,
             fontWeight: FontWeight.w500,
             color: Color(0xFF1E1E1E),
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 20.h),
         Row(
           children: [
             Text(
               '652',
               style: TextStyle(
                 fontFamily: AppFonts.poppins,
-                fontSize: 48,
+                fontSize: 48.sp,
                 fontWeight: FontWeight.w300,
                 color: Color(0xFF47BA80),
               ),
@@ -55,23 +55,23 @@ class MyPlaceTileWid extends StatelessWidget {
             Column(
               children: [
                 Container(
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.all(5).w,
                   decoration: BoxDecoration(
                     color: Color(0xFF47BA80),
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(30).w,
                   ),
                   child: Row(
                     children: [
                       Icon(
                         Icons.arrow_drop_down_outlined,
-                        size: 15,
+                        size: 15.sp,
                         color: Colors.white,
                       ),
                       Text(
                         '13%',
                         style: TextStyle(
                           fontFamily: AppFonts.poppins,
-                          fontSize: 10,
+                          fontSize: 10.sp,
                           fontWeight: FontWeight.w300,
                           color: Colors.white,
                         ),
@@ -83,7 +83,7 @@ class MyPlaceTileWid extends StatelessWidget {
                   'ppm',
                   style: TextStyle(
                     fontFamily: AppFonts.poppins,
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.w300,
                     color: Color(0xFF47BA80),
                   ),
@@ -102,22 +102,22 @@ class MyPlaceTileWid extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15).w,
           decoration: BoxDecoration(
             color: Color(0xFF47BA80),
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(30).w,
           ),
           child: Text(
             'Good',
             style: TextStyle(
               fontFamily: AppFonts.inter,
-              fontSize: 12,
+              fontSize: 12.sp,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),
           ),
         ),
-        SizedBox(height: 15),
+        SizedBox(height: 15.h),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
@@ -128,7 +128,7 @@ class MyPlaceTileWid extends StatelessWidget {
                   'View Details',
                   style: TextStyle(
                     fontFamily: AppFonts.poppins,
-                    fontSize: 12,
+                    fontSize: 12.sp,
                     fontWeight: FontWeight.w500,
                     color: Color(0xFF47BA80),
                   ),

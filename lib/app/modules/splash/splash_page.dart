@@ -14,7 +14,11 @@ class SplashPage extends GetView<SplashController> {
           Flexible(
             flex: 13,
             child: Center(
-              child: Image.asset(AppImages.appLogo, width: 200, height: 200),
+              child: Image.asset(
+                AppImages.appLogo,
+                width: 200.w,
+                height: 200.h,
+              ),
             ),
           ),
           Flexible(
@@ -27,16 +31,16 @@ class SplashPage extends GetView<SplashController> {
                   'Powered by',
                   style: TextStyle(
                     fontFamily: AppFonts.inter,
-                    fontSize: 12,
+                    fontSize: 12.sp,
                     color: Colors.grey,
                   ),
                 ),
-                const SizedBox(width: 5),
+                SizedBox(width: 5.w),
                 Text(
                   'M360 ICT',
                   style: TextStyle(
                     fontFamily: AppFonts.inter,
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w700,
                     color: Colors.green,
                   ),

@@ -13,12 +13,12 @@ class HomePage extends GetView<HomeController> {
           children: [
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15).w,
               decoration: BoxDecoration(
                 color: Color(0xff00f97b).withValues(alpha: .1),
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
+                  bottomLeft: Radius.circular(30).w,
+                  bottomRight: Radius.circular(30).w,
                 ),
               ),
               child: Column(
@@ -33,7 +33,7 @@ class HomePage extends GetView<HomeController> {
                             'Good Morning',
                             style: TextStyle(
                               fontFamily: AppFonts.poppins,
-                              fontSize: 16,
+                              fontSize: 16.sp,
                               fontWeight: FontWeight.w300,
                               color: Color(0xFF838383),
                             ),
@@ -42,7 +42,7 @@ class HomePage extends GetView<HomeController> {
                             userName,
                             style: TextStyle(
                               fontFamily: AppFonts.poppins,
-                              fontSize: 24,
+                              fontSize: 24.sp,
                               fontWeight: FontWeight.w500,
                               color: Color(0xFF1E1E1E),
                             ),
@@ -52,18 +52,18 @@ class HomePage extends GetView<HomeController> {
                       Spacer(),
                       Image(
                         image: AssetImage(AppImages.userPic),
-                        width: 100,
-                        height: 100,
+                        width: 100.w,
+                        height: 100.h,
                       ),
                     ],
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 5.h),
                   RichText(
                     text: TextSpan(
                       text: 'You are in a ',
                       style: TextStyle(
                         fontFamily: AppFonts.poppins,
-                        fontSize: 14,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w300,
                         color: Color(0xFF838383),
                       ),
@@ -72,7 +72,7 @@ class HomePage extends GetView<HomeController> {
                           text: 'healthy ',
                           style: TextStyle(
                             fontFamily: AppFonts.poppins,
-                            fontSize: 14,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.w700,
                             color: Color(0xFF47BA80),
                           ),
@@ -81,7 +81,7 @@ class HomePage extends GetView<HomeController> {
                           text: 'environment',
                           style: TextStyle(
                             fontFamily: AppFonts.poppins,
-                            fontSize: 14,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.w300,
                             color: Color(0xFF838383),
                           ),
@@ -89,11 +89,11 @@ class HomePage extends GetView<HomeController> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 5.h),
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 30.h),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Column(
@@ -103,7 +103,7 @@ class HomePage extends GetView<HomeController> {
                     'My Places',
                     style: TextStyle(
                       fontFamily: AppFonts.poppins,
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w300,
                       color: Color(0xFF1E1E1E),
                     ),
@@ -127,7 +127,7 @@ class HomePage extends GetView<HomeController> {
             '+',
             style: TextStyle(
               fontFamily: AppFonts.poppins,
-              fontSize: 34,
+              fontSize: 34.sp,
               fontWeight: FontWeight.w300,
               color: Colors.white,
             ),

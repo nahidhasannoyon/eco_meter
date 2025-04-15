@@ -6,8 +6,8 @@ class StackedImagesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 40,
-      width: 120,
+      height: 40.h,
+      width: 120.w,
       child: Stack(
         children: [
           for (int i = 0; i < 5; i++)
@@ -24,11 +24,11 @@ class StackedImagesWidget extends StatelessWidget {
           Positioned(
             left: 5 * 15, // adjust overlap
             child: CircleAvatar(
-              radius: 20,
+              radius: 20.r,
               backgroundColor: Colors.white,
               child: Container(
-                width: 35,
-                height: 35,
+                width: 35.w,
+                height: 35.h,
                 decoration: BoxDecoration(
                   color: Color(0xFFD9D9D9),
                   shape: BoxShape.circle,
@@ -40,7 +40,7 @@ class StackedImagesWidget extends StatelessWidget {
                       fontFamily: AppFonts.poppins,
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
-                      fontSize: 16,
+                      fontSize: 16.sp,
                     ),
                   ),
                 ),

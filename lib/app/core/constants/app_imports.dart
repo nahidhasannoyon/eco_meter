@@ -50,3 +50,4 @@ export 'package:eco_meter/app/core/config/firebase_options.dart';
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';
 export 'dart:developer' hide Flow;
+export 'package:flutter_screenutil/flutter_screenutil.dart';

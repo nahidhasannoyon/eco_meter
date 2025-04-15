@@ -8,7 +8,7 @@ class SignInPage extends GetView<SignInController> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0).w,
           child: Column(
             children: [
               Align(
@@ -17,22 +17,22 @@ class SignInPage extends GetView<SignInController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(height: 30),
+                    SizedBox(height: 30.h),
                     Text(
                       "Sign In",
                       style: TextStyle(
                         fontFamily: AppFonts.poppins,
-                        fontSize: 30,
+                        fontSize: 30.sp,
                         fontWeight: FontWeight.w500,
                         color: Colors.black,
                       ),
                     ),
-                    const SizedBox(height: 10),
-                    const Text(
+                    SizedBox(height: 10.h),
+                    Text(
                       "Let’s save environment together",
                       style: TextStyle(
                         fontFamily: AppFonts.inter,
-                        fontSize: 14,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                         color: Colors.black,
                       ),
@@ -40,6 +40,7 @@ class SignInPage extends GetView<SignInController> {
                   ],
                 ),
               ),
+              SizedBox(height: 80.h),
               Form(
                 key: controller.formKey,
                 autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -52,12 +53,12 @@ class SignInPage extends GetView<SignInController> {
                       controller: controller.emailController,
                       validator:
                           (value) => Validators.validateEmail(value ?? ''),
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         label: Text(
                           "Email",
                           style: TextStyle(
                             fontFamily: AppFonts.poppins,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
                           ),
@@ -66,7 +67,7 @@ class SignInPage extends GetView<SignInController> {
                         hintText: "user@example.com",
                         hintStyle: TextStyle(
                           fontFamily: AppFonts.inter,
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           color: Color(0xFFD6D6D6),
                         ),
                         border: UnderlineInputBorder(
@@ -74,7 +75,7 @@ class SignInPage extends GetView<SignInController> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20.h),
                     Obx(
                       () => TextFormField(
                         obscureText: !controller.isPasswordVisible.value,
@@ -90,14 +91,14 @@ class SignInPage extends GetView<SignInController> {
                                 controller.isPasswordVisible.value
                                     ? Icon(Icons.visibility)
                                     : Icon(Icons.visibility_off),
-                            iconSize: 20,
+                            iconSize: 20.sp,
                             color: Color(0xFFD6D6D6),
                           ),
                           label: Text(
                             "Password",
                             style: TextStyle(
                               fontFamily: AppFonts.poppins,
-                              fontSize: 12,
+                              fontSize: 12.sp,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
                             ),
@@ -106,7 +107,7 @@ class SignInPage extends GetView<SignInController> {
                           hintText: "**********",
                           hintStyle: TextStyle(
                             fontFamily: AppFonts.inter,
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: Color(0xFFD6D6D6),
                           ),
                           border: UnderlineInputBorder(
@@ -115,7 +116,7 @@ class SignInPage extends GetView<SignInController> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -128,11 +129,11 @@ class SignInPage extends GetView<SignInController> {
                               activeColor: Colors.white,
                               side: const BorderSide(color: Color(0xFF47BA80)),
                             ),
-                            const Text(
+                            Text(
                               "Remember me",
                               style: TextStyle(
                                 fontFamily: AppFonts.inter,
-                                fontSize: 14,
+                                fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.black,
                               ),
@@ -141,11 +142,11 @@ class SignInPage extends GetView<SignInController> {
                         ),
                         TextButton(
                           onPressed: () {},
-                          child: const Text(
+                          child: Text(
                             "Forgotten Password",
                             style: TextStyle(
                               fontFamily: AppFonts.inter,
-                              fontSize: 14,
+                              fontSize: 14.sp,
                               fontWeight: FontWeight.w700,
                               color: Color(0xFF47BA80),
                             ),
@@ -153,14 +154,14 @@ class SignInPage extends GetView<SignInController> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 40),
+                    SizedBox(height: 40.h),
                     SizedBox(
                       width: double.infinity,
                       child: Obx(
                         () => ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xFF47BA80),
-                            padding: const EdgeInsets.symmetric(vertical: 15),
+                            padding: const EdgeInsets.symmetric(vertical: 15).w,
                           ),
                           onPressed:
                               controller.isLoading.value
@@ -173,11 +174,11 @@ class SignInPage extends GetView<SignInController> {
                                   ? const CircularProgressIndicator(
                                     color: Colors.white,
                                   )
-                                  : const Text(
+                                  : Text(
                                     "Sign In",
                                     style: TextStyle(
                                       fontFamily: AppFonts.inter,
-                                      fontSize: 16,
+                                      fontSize: 16.sp,
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                     ),
@@ -188,36 +189,45 @@ class SignInPage extends GetView<SignInController> {
                   ],
                 ),
               ),
+              SizedBox(height: 30.h),
               Column(
                 children: [
                   Align(
                     alignment: Alignment.center,
-                    child: const Text(
+                    child: Text(
                       "Or Sign In with",
                       style: TextStyle(
                         fontFamily: AppFonts.inter,
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
                         color: Color(0xFFADADAD),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(AppImages.googleLogo, width: 40, height: 40),
+                      Image.asset(
+                        AppImages.googleLogo,
+                        width: 40.w,
+                        height: 40.h,
+                      ),
                       const SizedBox(width: 20),
-                      Image.asset(AppImages.fbLogo, width: 40, height: 40),
+                      Image.asset(AppImages.fbLogo, width: 40.w, height: 40.h),
                       const SizedBox(width: 20),
-                      Image.asset(AppImages.msLogo, width: 40, height: 40),
+                      Image.asset(AppImages.msLogo, width: 40.w, height: 40.h),
                       const SizedBox(width: 20),
-                      Image.asset(AppImages.appleLogo, width: 40, height: 40),
+                      Image.asset(
+                        AppImages.appleLogo,
+                        width: 40.w,
+                        height: 40.h,
+                      ),
                     ],
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 60.h),
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -225,25 +235,25 @@ class SignInPage extends GetView<SignInController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
+                      Text(
                         "Don’t have an account?",
                         style: TextStyle(
                           fontFamily: AppFonts.inter,
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: Color(0xFFADADAD),
                         ),
                       ),
-                      const SizedBox(width: 5),
+                      SizedBox(width: 5.w),
                       InkWell(
                         onTap: () {
                           Get.offAllNamed(SignUpRoutes.signUp);
                         },
-                        child: const Text(
+                        child: Text(
                           "Sign Up",
                           style: TextStyle(
                             fontFamily: AppFonts.inter,
-                            fontSize: 14,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.w700,
                             color: Color(0xFF47BA80),
                           ),
@@ -251,7 +261,7 @@ class SignInPage extends GetView<SignInController> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 60),
+                  SizedBox(height: 60.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -259,24 +269,24 @@ class SignInPage extends GetView<SignInController> {
                       Text(
                         'Powered by',
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           color: Colors.grey,
                           fontFamily: AppFonts.inter,
                         ),
                       ),
-                      const SizedBox(width: 5),
+                      SizedBox(width: 5.w),
                       Text(
                         'M360 ICT',
                         style: TextStyle(
                           fontFamily: AppFonts.inter,
-                          fontSize: 14,
+                          fontSize: 14.sp,
                           fontWeight: FontWeight.w700,
                           color: Colors.green,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                 ],
               ),
             ],
